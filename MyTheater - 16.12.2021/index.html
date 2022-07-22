@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Theater</title>
+    <link href="/styles/style.css" type="text/css" rel="stylesheet">
+    <script src="/src/app.js" type="module"></script>
+</head>
+
+<body>
+
+    <div id="container">
+
+        <!--Navigation-->
+        <header>
+            <nav>
+                <a href="/">Theater</a>
+                <ul>
+                    <!--Only users-->
+                    <li class="user"><a href="/profile">Profile</a></li>
+                    <li class="user"><a href="/create">Create Event</a></li>
+                    <li class="user"><a href="/logout">Logout</a></li>
+                    <!--Only guest-->
+                    <li class="guest"><a href="/login">Login</a></li>
+                    <li class="guest"><a href="/register">Register</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main id="content"></main>
+
+        <div id="pagesInfo">
+        <!--Home Page-->
+        <section class="welcomePage" id="homePage">
+            <div id="welcomeMessage">
+                <h1>My Theater</h1>
+                <p>Since 1962 World Theatre Day has been celebrated by ITI Centres, ITI Cooperating Members, theatre
+                    professionals, theatre organizations, theatre universities and theatre lovers all over the world on
+                    the 27th of March. This day is a celebration for those who can see the value and importance of the
+                    art
+                    form “theatre”, and acts as a wake-up-call for governments, politicians and institutions which have
+                    not
+                    yet recognised its value to the people and to the individual and have not yet realised its potential
+                    for
+                    economic growth.</p>
+            </div>
+            <div id="events">
+                <h1>Future Events</h1>
+                <div class="theaters-container" id="cardsContainer">
+                </div>
+            </div>
+        </section>
+
+        <!--Login Page-->
+        <section id="loginaPage">
+            <form class="loginForm">
+                <h2>Login</h2>
+                <div>
+                    <label for="email">Email:</label>
+                    <input id="email" name="email" type="text" placeholder="steven@abv.bg" value="">
+                </div>
+                <div>
+                    <label for="password">Password:</label>
+                    <input id="password" name="password" type="password" placeholder="********" value="">
+                </div>
+
+                <button class="btn" type="submit">Login</button>
+
+                <p class="field">
+                    <span>If you don't have profile click <a href="/register">here</a></span>
+                </p>
+            </form>
+        </section>
+
+        <!--Register Page-->
+        <section id="registerPage">
+            <form class="registerForm">
+                <h2>Register</h2>
+                <div class="on-dark">
+                    <label for="email">Email:</label>
+                    <input id="email" name="email" type="text" placeholder="steven@abv.bg" value="">
+                </div>
+
+                <div class="on-dark">
+                    <label for="password">Password:</label>
+                    <input id="password" name="password" type="password" placeholder="********" value="">
+                </div>
+
+                <div class="on-dark">
+                    <label for="repeatPassword">Repeat Password:</label>
+                    <input id="repeatPassword" name="repeatPassword" type="password" placeholder="********" value="">
+                </div>
+
+                <button class="btn" type="submit">Register</button>
+
+                <p class="field">
+                    <span>If you have profile click <a href="/login">here</a></span>
+                </p>
+            </form>
+        </section>
+
+        <!--Create Page-->
+        <section id="createPage">
+            <form class="create-form">
+                <h1>Create Theater</h1>
+                <div>
+                    <label for="title">Title:</label>
+                    <input id="title" name="title" type="text" placeholder="Theater name" value="">
+                </div>
+                <div>
+                    <label for="date">Date:</label>
+                    <input id="date" name="date" type="text" placeholder="Month Day, Year">
+                </div>
+                <div>
+                    <label for="author">Author:</label>
+                    <input id="author" name="author" type="text" placeholder="Author">
+                </div>
+                <div>
+                    <label for="description">Description:</label>
+                    <textarea id="description" name="description" placeholder="Description"></textarea>
+                </div>
+                <div>
+                    <label for="imageUrl">Image url:</label>
+                    <input id="imageUrl" name="imageUrl" type="text" placeholder="Image Url" value="">
+                </div>
+                <button class="btn" type="submit">Submit</button>
+            </form>
+        </section>
+
+        <!--Edit Page-->
+        <section id="editPage">
+            <form class="theater-form">
+                <h1>Edit Theater</h1>
+                <div>
+                    <label for="title">Title:</label>
+                    <input id="title" class="titleValue" name="title" type="text" placeholder="Theater name" value="">
+                </div>
+                <div>
+                    <label for="date">Date:</label>
+                    <input id="date" class="dateValue" name="date" type="text" placeholder="Month Day, Year" value="">
+                </div>
+                <div>
+                    <label for="author">Author:</label>
+                    <input id="author" class="authorValue" name="author" type="text" placeholder="Author"
+                        value="">
+                </div>
+                <div>
+                    <label for="description">Theater Description:</label>
+                    <textarea id="description" class="descValue" name="description"
+                        placeholder="Description"></textarea>
+                </div>
+                <div>
+                    <label for="imageUrl">Image url:</label>
+                    <input id="imageUrl" class="imgValue" name="imageUrl" type="text" placeholder="Image Url"
+                        value="">
+                </div>
+                <button class="btn" type="submit">Submit</button>
+            </form>
+        </section>
+
+        <!--Details Page-->
+        <section id="detailsPage">
+            <div id="detailsBox">
+            </div>
+        </section>
+
+        <!--Profile Page-->
+        <section id="profilePage">
+            <div class="userInfo">
+                <div class="avatar">
+                    <img src="./images/profilePic.png">
+                </div>
+                <h2 id="emailProfile"></h2>
+            </div>
+            <div class="board" id="eventsByProfileContainer">
+                <!--If there are event-->
+               
+
+                <!--If there are no event-->
+                
+            </div>
+        </section>
+    </div>
+        <footer>
+            <div>© 2021
+                <h3>JS Application</h3>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
