@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Orphanage help</title>
+    <link rel="stylesheet" href="/styles/style.css">
+    <script src="/src/app.js" type="module"></script>
+</head>
+
+<body>
+    <div id="box">
+        <header>
+            <!-- Navigation -->
+            <h1><a href="/">Orphelp</a></h1>
+
+            <nav>
+                <a href="/">Dashboard</a>
+
+                <!-- Logged-in users -->
+                <div id="user">
+                    <a href="/profile">My Posts</a>
+                    <a href="/create">Create Post</a>
+                    <a href="/logout">Logout</a>
+                </div>
+
+                <!-- Guest users -->
+                <div id="guest">
+                    <a href="/login">Login</a>
+                    <a href="/register">Register</a>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Main Content -->
+        <main id="main-content">
+
+        </main>
+
+        <!-- Dashboard -->
+        <div id="sections">
+        <section id="dashboard-page">
+        </section>
+
+        <!-- Login Page (Only for Guest users) -->
+        <section id="login-page" class="auth">
+            <form id="login">
+                <h1 class="title">Login</h1>
+
+                <article class="input-group">
+                    <label for="login-email">Email: </label>
+                    <input type="email" id="login-email" name="email">
+                </article>
+
+                <article class="input-group">
+                    <label for="password">Password: </label>
+                    <input type="password" id="password" name="password">
+                </article>
+
+                <input type="submit" class="btn submit-btn" value="Log In">
+            </form>
+        </section>
+
+        <!-- Register Page (Only for Guest users) -->
+        <section id="register-page" class="auth">
+            <form id="register">
+                <h1 class="title">Register</h1>
+
+                <article class="input-group">
+                    <label for="register-email">Email: </label>
+                    <input type="email" id="register-email" name="email">
+                </article>
+
+                <article class="input-group">
+                    <label for="register-password">Password: </label>
+                    <input type="password" id="register-password" name="password">
+                </article>
+
+                <article class="input-group">
+                    <label for="repeat-password">Repeat Password: </label>
+                    <input type="password" id="repeat-password" name="repeatPassword">
+                </article>
+
+                <input type="submit" class="btn submit-btn" value="Register">
+            </form>
+        </section>
+
+        <!-- Create Page (Only for logged-in users) -->
+        <section id="create-page" class="auth">
+            <form id="create">
+                <h1 class="title">Create Post</h1>
+
+                <article class="input-group">
+                    <label for="title">Post Title</label>
+                    <input type="title" name="title" id="title">
+                </article>
+
+                <article class="input-group">
+                    <label for="description">Description of the needs </label>
+                    <input type="text" name="description" id="description">
+                </article>
+
+                <article class="input-group">
+                    <label for="imageUrl"> Needed materials image </label>
+                    <input type="text" name="imageUrl" id="imageUrl">
+                </article>
+
+                <article class="input-group">
+                    <label for="address">Address of the orphanage</label>
+                    <input type="text" name="address" id="address">
+                </article>
+
+                <article class="input-group">
+                    <label for="phone">Phone number of orphanage employee</label>
+                    <input type="text" name="phone" id="phone">
+                </article>
+
+                <input type="submit" class="btn submit" value="Create Post">
+            </form>
+        </section>
+
+        <!-- Details Page -->
+        <section id="details-page">
+            <h1 class="title">Post Details</h1>
+
+            <div id="container">
+                <div id="details">
+               
+                </div>
+            </div>
+        </section>
+
+        <!-- Edit Page (Only for logged-in users) -->
+        <section id="edit-page" class="auth">
+            <form id="edit">
+                <h1 class="title">Edit Post</h1>
+
+                <article class="input-group">
+                    <label for="title">Post Title</label>
+                    <input type="title" name="title" id="title" class ='adtitle' value="">
+                </article>
+
+                <article class="input-group">
+                    <label for="description">Description of the needs </label>
+                    <input type="text" name="description" id="description" class ='addescription' value="">
+                </article>
+
+                <article class="input-group">
+                    <label for="imageUrl"> Needed materials image </label>
+                    <input type="text" name="imageUrl" id="imageUrl" class ='adimageUrl' value="">
+                </article>
+
+                <article class="input-group">
+                    <label for="address">Address of the orphanage</label>
+                    <input type="text" name="address" id="address" class ='adaddress' value="">
+                </article>
+
+                <article class="input-group">
+                    <label for="phone">Phone number of orphanage employee</label>
+                    <input type="text" name="phone" id="phone" class ='adphone' value="">
+                </article>
+
+                <input type="submit" class="btn submit" value="Edit Post">
+            </form>
+        </section>
+
+        <!-- My Posts -->
+        <section id="my-posts-page">
+           
+        </section>
+    </div>
+    </div>
+</body>
+
+</html>
