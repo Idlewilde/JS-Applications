@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=\, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <title>ClearCareer</title>
+    <script src="/src/app.js" type="module"></script>
+  </head>
+  <body>
+    <div id="wrapper">
+      <header>
+        <!-- Navigation -->
+        <a id="logo" href="/"
+          ><img id="logo-img" src="./images/logo.jpg" alt=""
+        /></a>
+
+        <nav>
+          <div>
+            <a href="/dashboard">Dashboard</a>
+          </div>
+
+          <!-- Logged-in users -->
+          <div class="user">
+            <a href="/create">Create Offer</a>
+            <a href="/logout">Logout</a>
+          </div>
+
+          <!-- Guest users -->
+          <div class="guest">
+            <a href="/login">Login</a>
+            <a href="/register">Register</a>
+          </div>
+        </nav>
+      </header>
+
+      <main id="content">
+        <div id="all-sections">
+        <!-- Home page -->
+        <section id="home">
+          <img
+            src="./images/pngkey.com-hunting-png-6697165-removebg-preview.png"
+            alt="home"
+          />
+          <h2>Searching for a job?</h2>
+          <h3>The right place for a new career start!</h3>
+        </section>
+
+        <!-- Dashboard page -->
+        <section id="dashboard">
+          
+        </section>
+
+        <!-- Register Page (Only for Guest users) -->
+        <section id="register">
+          <div class="form">
+            <h2>Register</h2>
+            <form class="login-form">
+              <input
+                type="text"
+                name="email"
+                id="register-email"
+                placeholder="email"
+              />
+              <input
+                type="password"
+                name="password"
+                id="register-password"
+                placeholder="password"
+              />
+              <input
+                type="password"
+                name="re-password"
+                id="repeat-password"
+                placeholder="repeat password"
+              />
+              <button type="submit">register</button>
+              <p class="message">Already registered? <a href="/login">Login</a></p>
+            </form>
+          </div>
+        </section>
+
+        <!-- Login Page (Only for Guest users) -->
+        <section id="login">
+          <div class="form">
+            <h2>Login</h2>
+            <form class="login-form">
+              <input type="text" name="email" id="email" placeholder="email" />
+              <input
+                type="password"
+                name="password"
+                id="password"
+                placeholder="password"
+              />
+              <button type="submit">login</button>
+              <p class="message">
+                Not registered? <a href="/register">Create an account</a>
+              </p>
+            </form>
+          </div>
+        </section>
+
+        <!-- Create Page (Only for logged-in users) -->
+        <section id="create">
+          <div class="form">
+            <h2>Create Offer</h2>
+            <form class="create-form">
+              <input
+                type="text"
+                name="title"
+                id="job-title"
+                placeholder="Title"
+              />
+              <input
+                type="text"
+                name="imageUrl"
+                id="job-logo"
+                placeholder="Company logo url"
+              />
+              <input
+                type="text"
+                name="category"
+                id="job-category"
+                placeholder="Category"
+              />
+              <textarea
+                id="job-description"
+                name="description"
+                placeholder="Description"
+                rows="4"
+                cols="50"
+              ></textarea>
+              <textarea
+                id="job-requirements"
+                name="requirements"
+                placeholder="Requirements"
+                rows="4"
+                cols="50"
+              ></textarea>
+              <input
+                type="text"
+                name="salary"
+                id="job-salary"
+                placeholder="Salary"
+              />
+
+              <button type="submit">post</button>
+            </form>
+          </div>
+        </section>
+
+        <!-- Details page -->
+        <section id="details">
+          <div id="details-wrapper">
+          
+          </div>
+        </section>
+
+        <!-- Edit Page (Only for logged-in users) -->
+        <section id="edit">
+          <div class="form">
+            <h2>Edit Offer</h2>
+            <form class="edit-form">
+              <input
+                type="text"
+                name="title"
+                id="job-title"
+                class="job-title"
+                placeholder="Title"
+              />
+              <input
+                type="text"
+                name="imageUrl"
+                id="job-logo"
+                class="job-imageUrl"
+                placeholder="Company logo url"
+              />
+              <input
+                type="text"
+                name="category"
+                id="job-category"
+                class="job-category"
+                placeholder="Category"
+              />
+              <textarea
+                id="job-description"
+                class="job-description"
+                name="description"
+                placeholder="Description"
+                rows="4"
+                cols="50"
+              ></textarea>
+              <textarea
+                id="job-requirements"
+                class="job-requirements"
+                name="requirements"
+                placeholder="Requirements"
+                rows="4"
+                cols="50"
+              ></textarea>
+              <input
+                type="text"
+                name="salary"
+                id="job-salary"
+                class="job-salary"
+                placeholder="Salary"
+              />
+
+              <button type="submit">post</button>
+            </form>
+          </div>
+        </section>
+        </div>
+      </main>
+    </div>
+    <footer>
+      <p>@ClearCareer</p>
+    </footer>
+  </body>
+</html>
